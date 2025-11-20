@@ -59,6 +59,19 @@
             color: #94a3b8;
         }
 
+        /* تنسيق مشغل الصوت */
+        .audio-wrapper {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+        audio {
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+        }
+
         .section-title {
             text-align: center;
             margin: 30px 0 15px 0;
@@ -68,6 +81,24 @@
             display: inline-block;
             width: 100%;
         }
+
+        /* تنسيق معرض الأعمال */
+        .gallery-grid {
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 صور جنب بعض */
+            gap: 8px;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .gallery-img:hover { transform: scale(1.1); border-color: #fbbf24; }
 
         .services-grid {
             padding: 0 20px;
@@ -165,11 +196,26 @@
                 إهداء خاص إلى حفيدي الغالي <span style="color:#38bdf8">"عمر"</span><br>
                 حفظه الله ورعاه
             </div>
+
+            <div class="audio-wrapper">
+                <p style="margin:0 0 5px; font-size:12px; color:#cbd5e1;">🎧 استمع الآن</p>
+                <audio controls>
+                    <source src="sound.m4a" type="audio/mp4">
+                    <source src="sound.mp3" type="audio/mpeg">
+                    متصفحك لا يدعم تشغيل الصوت.
+                </audio>
+            </div>
+        </div>
+
+        <div class="section-title">- من أعمالي -</div>
+        <div class="gallery-grid">
+            <img src="downloadfile.jpeg" class="gallery-img" alt="عمل 1">
+            <img src="downloadfile.jpeg" class="gallery-img" alt="عمل 2">
+            <img src="downloadfile.jpeg" class="gallery-img" alt="عمل 3">
         </div>
 
         <div class="section-title">- خدماتي -</div>
         <div class="services-grid">
-            
             <div class="service-card" onclick="window.open('https://wa.me/201007411385?text=اريد_خدمة_تصميم_صور', '_blank')">
                 <i class="fas fa-paint-brush service-icon"></i>
                 <div class="service-info">
@@ -177,7 +223,6 @@
                     <p>أقوم بتوليد وتعديل الصور باحترافية حسب طلبك.</p>
                 </div>
             </div>
-
             <div class="service-card" onclick="window.open('https://wa.me/201007411385?text=استشارة', '_blank')">
                 <i class="fas fa-lightbulb service-icon"></i>
                 <div class="service-info">
@@ -185,43 +230,35 @@
                     <p>تواصل معي لأي استفسار تقني.</p>
                 </div>
             </div>
-
         </div>
 
         <div class="section-title">- منتجات أنصح بها -</div>
         <div class="products-grid">
-            
             <div class="product-card">
                 <i class="fas fa-tv" style="font-size:30px; color:#333;"></i>
                 <h4>شاشة سمارت 43 بوصة</h4>
                 <div class="product-price">7,000 EGP</div>
                 <a href="#" class="buy-btn">اشترِ الآن</a>
             </div>
-
             <div class="product-card">
                 <i class="fas fa-mobile-alt" style="font-size:30px; color:#333;"></i>
                 <h4>هاتف ذكي حديث</h4>
                 <div class="product-price">خصم خاص</div>
                 <a href="#" class="buy-btn">تفاصيل العرض</a>
             </div>
-
         </div>
 
         <div class="support-section">
-            
             <a href="#" class="donate-btn">
                 <i class="fas fa-coffee"></i> ادعمني بفنجان قهوة
             </a>
-
             <div style="border-top: 1px solid #334155; margin: 15px 0;"></div>
-
             <div class="icons-container">
                 <a href="https://wa.me/201007411385" class="social-link"><i class="fab fa-whatsapp"></i></a>
                 <a href="tel:+201007411385" class="social-link"><i class="fas fa-phone"></i></a>
                 <a href="https://facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
                 <a href="mailto:email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
-            
             <p style="font-size:12px; color:#64748b; margin-top:15px;">جميع الحقوق محفوظة © 2025</p>
         </div>
 
