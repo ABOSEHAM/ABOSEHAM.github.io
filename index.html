@@ -3,120 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معي - مجدي</title>
+    <title>الصفحة الشخصية - مجدي</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* تنسيقات عامة للصفحة */
         body {
-            background-color: #0f172a; /* لون الخلفية الغامق */
+            background-color: #0f172a; /* الخلفية الكحلي الغامق */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px; /* مسافة عشان الموبايل */
         }
 
-        /* الحاوية الحاملة للأزرار */
-        .social-card {
-            text-align: center;
-            padding: 30px;
-            border: 2px solid #1e293b;
-            border-radius: 20px;
+        /* الكارت اللي شايل كل حاجة */
+        .profile-card {
             background-color: #1e293b;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
         }
 
-        .social-title {
+        /* 1. تنسيق الصورة الشخصية */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* بيخلي الصورة مدورة */
+            object-fit: cover;
+            border: 4px solid #38bdf8; /* برواز لبني حوالين الصورة */
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        /* 2. تنسيق الاسم والبيانات */
+        .name {
             color: #fff;
-            margin-bottom: 25px;
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
         }
 
+        .title {
+            color: #94a3b8; /* لون رصاصي فاتح */
+            font-size: 16px;
+            margin: 0 0 30px 0;
+        }
+
+        /* خط فاصل شيك */
+        .divider {
+            height: 1px;
+            background-color: #334155;
+            margin: 20px 40px;
+        }
+
+        /* 3. تنسيق الأيقونات (الجزء الجديد) */
         .icons-container {
             display: flex;
-            gap: 15px;
             justify-content: center;
-            flex-wrap: wrap;
+            gap: 12px; /* مسافة مناسبة بين الزراير */
+            flex-wrap: nowrap; /* يمنع نزول السطر */
         }
 
-        /* تصميم الزر الموحد */
         .btn-social {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 60px;
-            height: 60px;
-            text-decoration: none;
+            width: 42px; /* حجم صغير ومناسب للموبايل */
+            height: 42px;
             border-radius: 50%;
-            font-size: 28px;
+            font-size: 18px;
             color: white;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            background-color: #334155; /* لون موحد في البداية */
-            position: relative;
+            text-decoration: none;
+            background-color: #334155;
+            transition: all 0.3s ease;
         }
 
-        /* ألوان وتأثيرات خاصة لكل زر */
-        
-        /* واتساب */
-        .btn-social.whatsapp:hover {
-            background-color: #25D366;
-            transform: scale(1.2) rotate(-10deg);
-        }
-
-        /* هاتف */
-        .btn-social.phone:hover {
-            background-color: #0ea5e9;
-            transform: scale(1.2);
-        }
-
-        /* فيسبوك */
-        .btn-social.facebook:hover {
-            background-color: #1877F2;
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        /* انستجرام */
-        .btn-social.instagram:hover {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            transform: scale(1.2);
-        }
-
-        /* بريد إلكتروني */
-        .btn-social.email:hover {
-            background-color: #ea4335;
-            transform: scale(1.2);
-        }
+        /* ألوان الأيقونات عند اللمس */
+        .btn-social.whatsapp:hover { background-color: #25D366; transform: translateY(-3px); }
+        .btn-social.phone:hover { background-color: #0ea5e9; transform: translateY(-3px); }
+        .btn-social.facebook:hover { background-color: #1877F2; transform: translateY(-3px); }
+        .btn-social.instagram:hover { background: linear-gradient(45deg, #f09433, #bc1888); transform: translateY(-3px); }
+        .btn-social.email:hover { background-color: #ea4335; transform: translateY(-3px); }
 
     </style>
 </head>
 <body>
 
-    <div class="social-card">
-        <h2 class="social-title">تواصل معي</h2>
+    <div class="profile-card">
+        
+        <img src="4640.jpg" alt="صورة مجدي" class="profile-img">
+
+        <h1 class="name">أ/ مجدي</h1>
+        <p class="title">أهلاً بكم في موقعي الشخصي</p>
+
+        <div class="divider"></div>
+
+        <h3 style="color: white; font-size: 16px; margin-bottom: 15px;">تواصل معي</h3>
         
         <div class="icons-container">
-            <a href="https://wa.me/201007411385" target="_blank" class="btn-social whatsapp" title="واتساب">
+            <a href="https://wa.me/201007411385" target="_blank" class="btn-social whatsapp">
                 <i class="fab fa-whatsapp"></i>
             </a>
 
-            <a href="tel:+201007411385" class="btn-social phone" title="اتصال هاتفي">
+            <a href="tel:+201007411385" class="btn-social phone">
                 <i class="fas fa-phone-alt"></i>
             </a>
 
-            <a href="https://www.facebook.com" target="_blank" class="btn-social facebook" title="فيسبوك">
+            <a href="https://www.facebook.com" target="_blank" class="btn-social facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
 
-            <a href="https://www.instagram.com" target="_blank" class="btn-social instagram" title="انستجرام">
+            <a href="https://www.instagram.com" target="_blank" class="btn-social instagram">
                 <i class="fab fa-instagram"></i>
             </a>
 
-            <a href="mailto:" class="btn-social email" title="البريد الإلكتروني">
+            <a href="mailto:yourname@example.com" class="btn-social email">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
+
     </div>
 
 </body>
