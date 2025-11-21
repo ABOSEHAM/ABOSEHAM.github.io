@@ -9,13 +9,13 @@
     <style>
         /* إعدادات الألوان (ستايل النيون الأزرق الجذاب) */
         :root {
-            --bg-color: #111111;        /* خلفية كربونية غامقة */
-            --card-bg: #1f1f1f;         /* لون بطاقات أغمق قليلاً */
-            --text-main: #FFFFFF;       /* لون النصوص الرئيسية: أبيض ساطع */
-            --text-secondary: #AAAAAA;  /* لون نصوص فرعية: رمادي فاتح */
-            --accent-neon: #00FFFF;     /* لون التمييز: أزرق نيون (قوي جداً) */
-            --btn-bg: #00FFFF;          /* لون الأزرار الأساسي */
-            --btn-hover: #00DDDD;       /* لون الأزرار عند التحويم */
+            --bg-color: #111111;        
+            --card-bg: #1f1f1f;         
+            --text-main: #FFFFFF;       
+            --text-secondary: #AAAAAA;  
+            --accent-neon: #00FFFF;     
+            --btn-bg: #00FFFF;          
+            --btn-hover: #00DDDD;       
         }
 
         body {
@@ -44,9 +44,7 @@
             transition: transform 0.3s ease;
         }
         
-        .card:hover {
-            transform: scale(1.02); 
-        }
+        .card:hover { transform: scale(1.02); }
 
         h1 { 
             font-size: 32px; 
@@ -61,13 +59,6 @@
             margin-bottom: 20px; 
         }
 
-        p { 
-            font-size: 16px; 
-            line-height: 1.6; 
-            color: var(--text-secondary); 
-            margin-bottom: 30px; 
-        }
-        
         /* تنسيق الآية الكريمة - المصحح */
         .quran-text {
             color: #FFFFFF; 
@@ -79,6 +70,16 @@
             padding-bottom: 10px; 
             font-weight: normal;
             display: block; 
+        }
+
+        /* مشغل الموسيقى */
+        .audio-player {
+            margin-top: 25px;
+            border: 1px solid var(--accent-neon);
+            border-radius: 8px;
+            padding: 5px;
+            background-color: #2e2e2e;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
         }
 
         /* زر الواتساب */
@@ -141,9 +142,9 @@
         <h2>أبو سهام</h2>
         
         <p>
-            أنا مجدي، وهذا موقعي الشخصي من
+            أنا مجدي، وهذا موقعي الشخصي.
             <br>
-            المنصورة الجديدة.
+            هدفنا هو التواصل الفعال وتقديم الأفضل دائماً.
             <br><br>
             نسعد بتواجدكم وتواصلكم معنا دائماً.
         </p>
@@ -158,9 +159,21 @@
             <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
         </div>
         
-        <h3 style="color: var(--accent-neon); margin-top: 20px;">بعض الملفات والصور</h3>
-        <img src="FotorCreated-001.jpg" alt="صورة تم إنشاؤها" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 15px; border: 1px solid var(--accent-neon);">
-        <p style="margin-top: 10px; font-size: 14px;">صورة FotorCreated-001.jpg من المستودع.</p>
+        <h3 style="color: var(--accent-neon); margin-top: 20px;">صورتي الشخصية</h3>
+        
+        <img src="IMG_20230810_21....jpeg" alt="صورة فنجان الشاي الأحمر" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 15px; border: 1px solid var(--accent-neon);">
+        
+        <p style="margin-top: 10px; font-size: 14px;">(الصورة تم استيرادها من ملفك IMG_20230810_21....)</p>
+        
+        <h3 style="color: var(--accent-neon); margin-top: 30px;">موسيقى الموقع</h3>
+        
+        <div class="audio-player">
+             <audio controls loop>
+                <source src="my-song.mp3" type="audio/mp3">
+                
+                متصفحك لا يدعم تشغيل الصوت.
+            </audio>
+        </div>
 
     </div>
 
