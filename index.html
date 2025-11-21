@@ -3,173 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع الأستاذ مجدي</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <title>موقع أبو سهام | مجدي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* إعدادات الألوان المبهجة (بيج وتيفاني) */
+        /* إعدادات الألوان (ستايل النيون الأزرق الجذاب) */
         :root {
-            --bg-color: #fdfbf7;       /* بيج فاتح */
-            --card-bg: #ffffff;        /* أبيض */
-            --text-main: #333333;      /* رصاصي غامق */
-            --tiffany: #1abc9c;        /* تيفاني */
-            --gold: #d4ac0d;           /* ذهبي */
+            --bg-color: #111111;        /* خلفية كربونية غامقة */
+            --card-bg: #1f1f1f;         /* لون بطاقات أغمق قليلاً */
+            --text-main: #FFFFFF;       /* لون النصوص الرئيسية: أبيض ساطع */
+            --text-secondary: #AAAAAA;  /* لون نصوص فرعية: رمادي فاتح */
+            --accent-neon: #00FFFF;     /* لون التمييز: أزرق نيون (قوي جداً) */
+            --btn-bg: #00FFFF;          /* لون الأزرار الأساسي */
+            --btn-hover: #00DDDD;       /* لون الأزرار عند التحويم */
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Arial', sans-serif; 
             margin: 0;
             padding: 0;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* الهيدر والصورة الشخصية */
-        header { padding: 20px 0; }
-        .basmala { color: var(--gold); font-size: 1.2em; font-weight: bold; margin-bottom: 15px; }
-        
-        .profile-pic {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 4px solid var(--tiffany);
-            object-fit: cover;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        h1 { margin: 10px 0; color: var(--text-main); }
-
-        /* الإهداء */
-        .dedication {
-            background: #e0f7fa;
-            color: #00695c;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 20px 0;
-            font-size: 0.9em;
-            border-right: 4px solid var(--tiffany);
-        }
-
-        /* مشغل الصوت */
-        audio { width: 100%; border-radius: 20px; margin-bottom: 20px; }
-
-        /* العناوين */
-        h3 { color: var(--tiffany); border-bottom: 2px solid #eee; padding-bottom: 10px; display: inline-block; }
-
-        /* معرض الصور */
-        .gallery {
+            background-color: var(--bg-color);
+            color: var(--text-main);
             display: flex;
-            gap: 10px;
             justify-content: center;
-            overflow-x: auto;
-            padding-bottom: 10px;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
         }
-        .gallery img {
-            width: 110px;
-            height: 110px;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 2px solid white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .gallery img:hover { transform: scale(1.05); }
 
-        /* الكروت والأزرار */
+        /* تنسيق الكروت لتبرز على الخلفية */
         .card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
+            background-color: var(--card-bg);
+            padding: 40px 20px;
+            border-radius: 15px; 
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); /* ظل نيون جذاب */
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border: 2px solid var(--accent-neon); 
+            transition: transform 0.3s ease;
         }
         
-        .buy-btn {
-            background-color: var(--gold);
-            color: #fff;
-            padding: 8px 20px;
+        .card:hover {
+            transform: scale(1.02); 
+        }
+
+        h1 { 
+            font-size: 32px; 
+            margin-bottom: 10px; 
+            color: var(--accent-neon); 
+            text-shadow: 0 0 8px #00FFFF; /* تأثير الوهج على العناوين */
+        }
+        
+        h2 { 
+            font-size: 24px; 
+            color: var(--text-main); 
+            margin-bottom: 20px; 
+        }
+
+        p { 
+            font-size: 16px; 
+            line-height: 1.6; 
+            color: var(--text-secondary); 
+            margin-bottom: 30px; 
+        }
+        
+        /* تنسيق الآية الكريمة */
+        .quran-text {
+            color: #FFFFFF; 
+            font-size: 18px; 
+            margin-top: -5px; 
+            margin-bottom: 25px; 
+            /* تأثير الوهج النيوني */
+            text-shadow: 0 0 10px var(--accent-neon), 0 0 15px var(--accent-neon); 
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2); 
+            padding-bottom: 10px; 
+            font-weight: normal;
+            display: block; /* لضمان أخذ سطر كامل */
+        }
+
+        /* زر الواتساب */
+        .btn {
+            display: inline-block;
+            background-color: var(--btn-bg);
+            color: var(--bg-color);
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: bold;
+            transition: all 0.3s;
+            margin-bottom: 25px;
+            border: none;
+            box-shadow: 0 0 15px var(--accent-neon); /* وهج قوي حول الزر */
         }
-
-        .footer-btn {
-            background-color: var(--tiffany);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
+        
+        .btn:hover { 
+            background-color: var(--btn-hover); 
+            transform: scale(1.1); 
+            box-shadow: 0 0 25px var(--accent-neon); /* وهج أقوى عند التحويم */
+        }
+        
+        .social-icons { 
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            margin-top: 15px; 
+        }
+        
+        .social-icons a { 
+            color: var(--accent-neon); 
+            font-size: 28px; 
+            transition: color 0.3s, text-shadow 0.3s; 
+        }
+        
+        .social-icons a:hover { 
+            color: #FFFFFF; 
+            text-shadow: 0 0 10px var(--accent-neon); 
+        }
+        
+        .footer { 
+            margin-top: 30px; 
+            font-size: 12px; 
+            color: var(--text-secondary); 
         }
     </style>
-</head>
+    </head>
 <body>
 
-    <div class="container">
-        <div class="basmala">بسم الله الرحمن الرحيم</div>
-
-        <img src="1763690760422.jpeg" alt="أستاذ مجدي" class="profile-pic">
+    <div class="card">
         
-        <h1>أ/ مجدي</h1>
-        <p style="color: #777; margin-top: -5px;">مصمم جرافيك ومبدع بالذكاء الاصطناعي</p>
+        <h1>مرحباً بكم في موقع</h1>
+        
+        <span class="quran-text">
+            {وقل اعملوا فسيرى الله اعمالكم ورسوله والمؤمنون} صدق الله العظيم
+        </span>
+        
+        <h2>أبو سهام</h2>
+        
+        <p>
+            أنا مجدي، وهذا موقعي الشخصي من
+            <br>
+            المنصورة الجديدة.
+            <br><br>
+            نسعد بتواجدكم وتواصلكم معنا دائماً.
+        </p>
 
-        <div class="dedication">
-            <i class="fas fa-heart" style="color: red;"></i> 
-            إهداء خاص إلى حفيدي الغالي "عمر"
-        </div>
-
-        <audio controls>
-            <source src="Sound.m4a" type="audio/mp4">
-            متصفحك لا يدعم تشغيل الصوت.
-        </audio>
-
-        <h3>من أعمالي</h3>
-        <div class="gallery">
-            <img src="599b15b4-a0f1-4378-a7f3-0366fc481be0.jpg" alt="تصميم سينمائي">
-            <img src="a556afc7-8a8a-4ec6-8df2-c6633e108a26.jpg" alt="تصميم طبيعي">
-            <img src="4854.jpg" alt="تصميم شخصي">
-        </div>
-
-        <h3>خدماتي</h3>
-        <div class="card">
-            <i class="fas fa-magic" style="color: var(--tiffany); font-size: 2em; margin-bottom: 10px;"></i>
-            <h4>تصميم صور احترافية</h4>
-            <p style="color: #666; font-size: 0.9em;">أقوم بتحويل أفكارك إلى صور فنية مذهلة باستخدام الذكاء الاصطناعي</p>
-        </div>
-
-        <h3>منتجات أنصح بها</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-            <div class="card">
-                <i class="fas fa-tv" style="font-size: 2em; color: #333;"></i>
-                <h4>شاشة سمارت</h4>
-                <a href="https://www.amazon.eg/s?k=smart+tv+32" target="_blank" class="buy-btn">شاهد السعر</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-mobile-alt" style="font-size: 2em; color: #333;"></i>
-                <h4>هاتف ذكي</h4>
-                <a href="https://www.amazon.eg/s?k=mobile+phone" target="_blank" class="buy-btn">شاهد السعر</a>
-            </div>
-        </div>
-
-        <a href="#" class="footer-btn">
-            <i class="fas fa-mug-hot"></i> ادعمني بفنجان قهوة
+        <a href="https://wa.me/201007411385" class="btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> تواصل معي واتساب
         </a>
 
-        <br><br>
-        <div style="color: #ccc; font-size: 0.8em;">جميع الحقوق محفوظة © 2025</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        
+        <h3 style="color: var(--accent-neon); margin-top: 20px;">بعض الملفات والصور</h3>
+        <img src="FotorCreated-001.jpg" alt="صورة تم إنشاؤها" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 15px; border: 1px solid var(--accent-neon);">
+        <p style="margin-top: 10px; font-size: 14px;">صورة FotorCreated-001.jpg من المستودع.</p>
+
     </div>
 
-</body>
+    <div class="footer">
+        جميع الحقوق محفوظة © أبو سهام 2025
+    </div>
+    </body>
 </html>
