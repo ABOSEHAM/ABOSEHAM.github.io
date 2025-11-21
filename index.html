@@ -12,198 +12,208 @@
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
         
         body {
+            /* اللون الزيتوني للخلفية */
+            background-color: #C3C7A8; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             direction: rtl; 
             text-align: center; 
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            padding: 20px;
+            color: #303030; /* لون نص بني غامق */
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
         }
         .header {
-            background-color: #e0f2f7;
+            background-color: #FFFFFF; /* خلفية بيضاء للهيدر */
             padding: 20px;
             margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
-        /* ... (باقي التنسيقات السابقة للآية والأيقونات) ... */
-
+        .header h1 {
+            color: #303030;
+            margin-bottom: 10px;
+        }
+        /* تنسيق الآية القرآنية */
         .quran-text {
             font-family: 'Amiri', serif; 
             font-size: 1.4em;
-            color: #00695c; 
+            color: #1E8449; /* أخضر غامق */
             margin-top: 15px;
             padding: 10px;
-            border: 2px solid #00695c;
+            border: 2px solid #1E8449;
             border-radius: 5px;
             display: inline-block;
-            background-color: #e8f5e9;
+            background-color: #F0FFF0; /* خلفية خفيفة جداً للآية */
         }
         .profile-section {
-            margin-bottom: 40px;
+            background-color: #FFFFFF;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
         .profile-image {
-            width: 150px; 
-            height: 150px;
+            width: 180px; 
+            height: 180px;
             border-radius: 50%; 
             object-fit: cover; 
-            border: 5px solid #0d47a1;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border: 6px solid #C3C7A8; /* إطار بنفس لون الخلفية */
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
             margin-bottom: 20px;
         }
-        .media-section {
-            background-color: #fff;
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 600px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        audio {
-            width: 100%;
-            margin-top: 15px;
+        /* تنسيق أيقونات التواصل الاجتماعي */
+        .social-icons {
+            margin-top: 25px;
         }
         .social-icons a {
-            font-size: 30px;
+            font-size: 32px; 
             margin: 0 15px;
-            color: #333;
+            color: #303030;
             transition: color 0.3s;
         }
-        .social-icons .fa-facebook:hover { color: #3b5998; }
-        .social-icons .fa-instagram:hover { color: #E1306C; }
-        .social-icons .fa-youtube:hover { color: #FF0000; }
+        .social-icons a:hover {
+            color: #1E8449; /* تغيير اللون إلى الأخضر الداكن */
+        }
 
-        /* تنسيق قسم المنتجات الجديد */
-        .products-section {
-            margin-top: 50px;
-            padding: 30px 0;
-            background-color: #f0f0f0;
+        /* تنسيق قسم الصوت والصور والمنتجات */
+        .content-section {
+            background-color: #FFFFFF;
+            padding: 30px 20px;
             border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
-        .products-grid {
+        audio {
+            width: 80%;
+            margin-top: 15px;
+        }
+        .gallery, .products-grid {
             display: flex;
+            flex-wrap: wrap; 
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 20px;
+            gap: 25px; 
+            margin-top: 25px;
         }
-        .product-item {
-            background-color: #fff;
+        .image-item, .product-item {
+            background-color: #f9f9f9;
             padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            width: 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 280px;
             text-align: center;
-        }
-        .product-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .product-item h4 {
-            color: #e91e63; /* لون وردي للمنتجات */
-            margin-bottom: 10px;
         }
         .product-item a {
             display: block;
-            background-color: #e91e63;
+            background-color: #1E8449; /* لون زر أخضر داكن */
             color: white;
-            padding: 8px 15px;
+            padding: 10px 15px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
-        /* ... (باقي التنسيقات السابقة) ... */
+        .product-item a:hover {
+            background-color: #156535; /* لون أغمق عند المرور */
+        }
+        
+        .footer {
+            background-color: #C3C7A8; 
+            color: #303030;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
-
-    <div class="header">
-        
-        <nav class="nav-link">
-            <a href="index.html">العودة إلى الصفحة الرئيسية</a>
-        </nav>
-        
-        <h1>بسم الله الرحمن الرحيم</h1>
-        
-        <p class="quran-text">
-            ﴿وَقُلِ اعمَلوا فَسَيَرَى اللَّهُ عَمَلَكُم وَرَسولُهُ وَالمُؤمِنونَ﴾
-        </p>
-    </div>
-
-    <div class="profile-section">
-        <h2>أهلاً وسهلاً بك في صفحتي الشخصية!</h2>
-        
-        <img src="2687.jpg" alt="صورتي الشخصية" class="profile-image">
-        
-        <p>مرحباً بكم. هذه نبذة بسيطة عني وعن بعض الملفات.</p>
-        
-        <div class="social-icons">
-            <a href="#" target="_blank" title="فيسبوك"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" title="يوتيوب"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
     
-    <hr>
-    
-    <div class="media-section">
-        <h3>تشغيل الملف الصوتي</h3>
-        <audio controls>
-            <source src="الصوت.m4a" type="audio/mp4">
-            متصفحك لا يدعم وسم الصوت.
-        </audio>
-    </div>
-
-    <hr>
-
-    <h2>معرض الصور</h2>
-    <div class="gallery">
-        <div class="image-item">
-            <h3>صورة رقم 1</h3>
-            <img src="599b15b4-a0f1-4378-a7f3-0366fc481be0.jpg" alt="صورة عشوائية">
-            <p>ملف JPG</p>
-        </div>
-        <div class="image-item">
-            <h3>صورة رقم 2</h3>
-            <img src="IMG_20230810_215658_063.webp" alt="صورة بتاريخ 10 أغسطس 2023">
-            <p>ملف WebP</p>
-        </div>
-        <div class="image-item">
-            <h3>صورة رقم 3</h3>
-            <img src="FotorCreated-001.jpg" alt="صورة تم إنشاؤها بـ Fotor">
-            <p>ملف JPG</p>
-        </div>
-    </div>
-    
-    <hr>
-    
-    <div class="products-section">
-        <h2>🛍️ المنتجات المُرشَّحة لك</h2>
-        <div class="products-grid">
+    <div class="container">
+        <div class="header">
             
-            <div class="product-item">
-                <img src="product1.jpg" alt="اسم المنتج الأول">
-                <h4>المنتج الأول المميز</h4>
-                <p>وصف مختصر للمنتج.</p>
-                <a href="#" target="_blank">اطلب الآن</a>
-            </div>
+            <nav class="nav-link">
+                <a href="index.html" style="color: #1E8449; text-decoration: none;">العودة إلى الصفحة الرئيسية</a>
+            </nav>
             
-            <div class="product-item">
-                <img src="product2.jpg" alt="اسم المنتج الثاني">
-                <h4>المنتج الثاني الأكثر مبيعاً</h4>
-                <p>ميزات وخصائص هذا المنتج.</p>
-                <a href="#" target="_blank">شراء</a>
-            </div>
+            <h1>بسم الله الرحمن الرحيم</h1>
             
-            <div class="product-item">
-                <img src="product3.jpg" alt="اسم المنتج الثالث">
-                <h4>منتج جديد ومبتكر</h4>
-                <p>تفاصيل إضافية عن المنتج.</p>
-                <a href="#" target="_blank">التفاصيل</a>
-            </div>
+            <p class="quran-text">
+                ﴿وَقُلِ اعمَلوا فَسَيَرَى اللَّهُ عَمَلَكُم وَرَسولُهُ وَالمُؤمِنونَ﴾
+            </p>
+        </div>
 
+        <div class="profile-section">
+            <h2>أهلاً وسهلاً بك في صفحتي الشخصية!</h2>
+            
+            <img src="Downloadfile.jeg" alt="صورتي الشخصية" class="profile-image">
+            
+            <p>مرحباً بكم. هذه نبذة بسيطة عني وعن بعض الملفات.</p>
+            
+            <div class="social-icons">
+                <a href="#" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h3>تشغيل الملف الصوتي</h3>
+            <audio controls>
+                <source src="الصوت.m4a" type="audio/mp4">
+                متصفحك لا يدعم وسم الصوت.
+            </audio>
+        </div>
+
+        <div class="content-section">
+            <h2>معرض الصور</h2>
+            <div class="gallery">
+                <div class="image-item">
+                    <h3>صورة رقم 1</h3>
+                    <img src="599b15b4-a0f1-4378-a7f3-0366fc481be0.jpg" alt="صورة عشوائية" style="max-width:100%; height:auto; border-radius: 5px;">
+                    <p>ملف JPG</p>
+                </div>
+                <div class="image-item">
+                    <h3>صورة رقم 2</h3>
+                    <img src="IMG_20230810_215658_063.webp" alt="صورة بتاريخ 10 أغسطس 2023" style="max-width:100%; height:auto; border-radius: 5px;">
+                    <p>ملف WebP</p>
+                </div>
+                <div class="image-item">
+                    <h3>صورة رقم 3</h3>
+                    <img src="FotorCreated-001.jpg" alt="صورة تم إنشاؤها بـ Fotor" style="max-width:100%; height:auto; border-radius: 5px;">
+                    <p>ملف JPG</p>
+                </div>
+                </div>
+        </div>
+        
+        <div class="products-section content-section">
+            <h2>المنتجات المُرشَّحة لك</h2>
+            <div class="products-grid">
+                
+                <div class="product-item">
+                    <img src="product1.jpg" alt="اسم المنتج الأول" style="max-width:100%; height:auto; border-radius: 5px;">
+                    <h4>المنتج الأول المميز</h4>
+                    <p>وصف مختصر للمنتج.</p>
+                    <a href="#" target="_blank">اطلب الآن</a>
+                </div>
+                
+                <div class="product-item">
+                    <img src="product2.jpg" alt="اسم المنتج الثاني" style="max-width:100%; height:auto; border-radius: 5px;">
+                    <h4>المنتج الثاني الأكثر مبيعاً</h4>
+                    <p>ميزات وخصائص هذا المنتج.</p>
+                    <a href="#" target="_blank">شراء</a>
+                </div>
+                
+                <div class="product-item">
+                    <img src="product3.jpg" alt="اسم المنتج الثالث" style="max-width:100%; height:auto; border-radius: 5px;">
+                    <h4>منتج جديد ومبتكر</h4>
+                    <p>تفاصيل إضافية عن المنتج.</p>
+                    <a href="#" target="_blank">التفاصيل</a>
+                </div>
+
+            </div>
         </div>
     </div>
     
