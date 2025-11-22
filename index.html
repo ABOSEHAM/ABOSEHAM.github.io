@@ -7,43 +7,81 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9; /* لون خلفية هادي */
+            background-color: #f4f4f9;
             color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             text-align: center;
+            padding: 20px;
         }
         .profile-card {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             max-width: 90%;
-            width: 400px;
+            width: 450px;
+        }
+        .religious-text {
+            color: #27ae60;
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .quran-verse {
+            font-family: 'Amiri', serif;
+            color: #16a085;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
         }
         .profile-image {
             width: 150px;
             height: 150px;
-            border-radius: 50%; /* يخلي الصورة مدورة */
+            border-radius: 50%;
             object-fit: cover;
             border: 4px solid #e0e0e0;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         h1 {
-            margin: 10px 0;
-            font-size: 24px;
+            margin: 5px 0;
+            font-size: 26px;
             color: #2c3e50;
         }
         p.bio {
             font-size: 18px;
             color: #555;
-            line-height: 1.6;
+            margin-top: 10px;
+        }
+        .recommendation {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #d35400;
+        }
+        .omar-dedication {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f8f5;
+            border-radius: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .audio-player {
+            margin-top: 20px;
+            width: 100%;
+        }
+        audio {
+            width: 100%;
         }
         .footer {
-            margin-top: 30px;
+            margin-top: 25px;
             font-size: 12px;
             color: #999;
         }
@@ -52,10 +90,30 @@
 <body>
 
     <div class="profile-card">
-        <img src="5131.jpg" alt="صورة مجدي" class="profile-image">
+        
+        <div class="religious-text">بسم الله الرحمن الرحيم</div>
+        <div class="quran-verse">"وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ وَرَسُولُهُ وَالْمُؤْمِنُونَ"</div>
+
+        <img src="https://github.com/ABOSEHAM.png" alt="صورة أبو سهام" class="profile-image">
         
         <h1>أبو سهام</h1>
         <p class="bio">أنا مجدي، وهنا مساحتي الخاصة على الإنترنت.</p>
+
+        <div class="recommendation">
+            ✨ وأرشح لكم هذه السلع ✨
+        </div>
+        
+        <div class="omar-dedication">
+            ❤️ إهداء خاص إلى حفيدي الغالي "عمر"
+        </div>
+
+        <div class="audio-player">
+            <p style="font-size:12px; color:#777;">استمع إلى الملف الصوتي:</p>
+            <audio controls>
+                <source src="" type="audio/mpeg">
+                المتصفح الخاص بك لا يدعم تشغيل الصوت.
+            </audio>
+        </div>
         
         <div class="footer">
             &copy; 2025 جميع الحقوق محفوظة
