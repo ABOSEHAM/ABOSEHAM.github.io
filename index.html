@@ -1,21 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>موقع أبو سهام</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع مجدي عيد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Tahoma', sans-serif; background-color: #f0f2f5; text-align: center; padding: 20px; }
-        .card { background-color: white; padding: 30px; border-radius: 15px; margin: 50px auto; max-width: 600px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #1a73e8; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        /* تصميم رأس الصفحة */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .header h1 { margin: 0; font-size: 28px; }
+        .header p { margin-top: 10px; opacity: 0.9; }
+
+        .container {
+            max-width: 600px;
+            margin: -30px auto 0; /* يرفع المحتوى لفوق شوية */
+            padding: 20px;
+            position: relative;
+        }
+
+        /* تصميم الكروت (المربعات البيضاء) */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .section-title {
+            color: #1e3c72;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* أزرار التواصل الاجتماعي */
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.2s;
+            box-sizing: border-box;
+        }
+        .btn-social:hover { transform: scale(1.02); }
+        .btn-fb { background-color: #1877F2; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .btn-yt { background-color: #FF0000; }
+        .icon { margin-left: 10px; font-size: 20px; }
+
+        /* معرض الصور */
+        .art-gallery img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border: 4px solid #fff;
+        }
+        
+        /* مشغل الصوت */
+        audio { width: 100%; outline: none; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>أهلاً بكم في موقع أبو سهام</h1>
-        <hr>
-        <p>السلام عليكم ورحمة الله وبركاته.</p>
-        <p>مرحباً بكم في موقعي الشخصي.</p>
+
+    <div class="header">
+        <h1>مجدي عيد</h1>
+        <p>مرحباً بكم في موقعي الشخصي ومعرض تصميماتي</p>
     </div>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="section-title">تابعوني على</div>
+            
+            <a href="https://www.facebook.com/Borawda" target="_blank" class="btn-social btn-fb">
+                <i class="fab fa-facebook icon"></i> فيسبوك
+            </a>
+
+            <a href="https://www.instagram.com/magdyeid59/" target="_blank" class="btn-social btn-insta">
+                <i class="fab fa-instagram icon"></i> إنستجرام
+            </a>
+
+            <a href="https://www.youtube.com/@Magdyeid682" target="_blank" class="btn-social btn-yt">
+                <i class="fab fa-youtube icon"></i> يوتيوب
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="section-title">✨ معرض إبداعاتي ✨</div>
+            <p style="color:#666; font-size:14px; margin-bottom:15px;">تصميمات خاصة باستخدام الذكاء الاصطناعي</p>
+            
+            <div class="art-gallery">
+                <img src="1763221734857.jpg" alt="تصميم 1">
+                
+                <img src="downloadfile.jpeg" alt="تصميم 2">
+                
+                <img src="grok_image_13ro4.jpg" alt="تصميم 3">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">🎧 استمع الآن</div>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                المتصفح لا يدعم الصوت.
+            </audio>
+        </div>
+
+    </div>
+
 </body>
 </html>
