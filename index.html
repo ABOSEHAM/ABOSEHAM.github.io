@@ -1,27 +1,126 @@
-<div style="padding: 20px; font-family: Arial, sans-serif;">
-    <h3>تواصل معي:</h3>
-    <ul style="list-style-type: none; padding: 0;">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع مجدي عيد الشخصي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 { margin: 0; font-size: 2.5em; }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        
+        /* تنسيق قسم الروابط */
+        .section-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        /* أزرار السوشيال ميديا */
+        .social-link {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s, background 0.2s;
+            border: 1px solid #eee;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .social-link:hover {
+            transform: translateY(-3px);
+            background: #e9ecef;
+        }
+        .social-icon { font-size: 28px; margin-left: 15px; width: 35px; text-align: center; }
+        
+        /* معرض الصور */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-item {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 10px;
+            background: #f9f9f9;
+            color: #666;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
 
-        <li style="margin-bottom: 15px; display: flex; align-items: center;">
-            <a href="https://www.facebook.com/Borawda" target="_blank" style="text-decoration: none; display: flex; align-items: center; color: #3b5998; font-weight: bold; font-size: 18px;">
-                <img src="1763221734857.jpg" alt="فيسبوك" style="width: 40px; height: 40px; margin-left: 10px; border-radius: 5px; object-fit: cover;">
-                 فيسبوك (Facebook)
+        /* مشغل الصوت */
+        audio {
+            width: 100%;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>أهلاً بكم في موقع مجدي عيد</h1>
+        <p>مساحة خاصة لإبداعاتي وتصميماتي بالذكاء الاصطناعي</p>
+    </div>
+
+    <div class="container">
+
+        <div class="section-box">
+            <h2 class="section-title">تواصل معي</h2>
+            
+            <a href="https://www.facebook.com/Borawda" target="_blank" class="social-link">
+                <i class="fab fa-facebook social-icon" style="color: #1877F2;"></i>
+                <span style="font-size: 18px; font-weight: bold;">صفحتي على فيسبوك</span>
             </a>
-        </li>
 
-        <li style="margin-bottom: 15px; display: flex; align-items: center;">
-            <a href="https://www.instagram.com/magdyeid59/" target="_blank" style="text-decoration: none; display: flex; align-items: center; color: #C13584; font-weight: bold; font-size: 18px;">
-                <img src="downloadfile.jpeg" alt="إنستجرام" style="width: 40px; height: 40px; margin-left: 10px; border-radius: 5px; object-fit: cover;">
-                 إنستجرام (Instagram)
-            </a>
-        </li>
-
-        <li style="margin-bottom: 15px; display: flex; align-items: center;">
-            <a href="https://www.youtube.com/@Magdyeid682" target="_blank" style="text-decoration: none; display: flex; align-items: center; color: #FF0000; font-weight: bold; font-size: 18px;">
-                <img src="grok_image_13ro4.jpg" alt="يوتيوب" style="width: 40px; height: 40px; margin-left: 10px; border-radius: 5px; object-fit: cover;">
-                 يوتيوب (YouTube)
-            </a>
-        </li>
-
-    </ul>
-</div>
+            <a href="https://www.instagram.com/magdyeid59/" target="_blank" class="social-link">
+                <i class="fab fa-instagram social-icon" style="color: #C135
