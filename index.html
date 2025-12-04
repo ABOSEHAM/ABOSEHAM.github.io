@@ -56,6 +56,25 @@
             padding-bottom: 10px;
         }
 
+        /* تنسيق الصور */
+        .gallery {
+            text-align: center;
+        }
+        
+        .gallery img {
+            max-width: 100%; /* لضمان أن الصورة لا تخرج عن الشاشة */
+            width: 300px; /* عرض مناسب للصورة */
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* تكبير بسيط عند وضع الماوس */
+        }
+
         /* تنسيق الأزرار */
         .btn {
             display: inline-block;
@@ -68,23 +87,12 @@
             text-align: center;
         }
 
-        /* لون زر يوتيوب */
-        .btn-youtube {
-            background: #e74c3c;
-        }
-        .btn-youtube:hover {
-            background: #c0392b;
-        }
+        .btn-youtube { background: #e74c3c; }
+        .btn-youtube:hover { background: #c0392b; }
 
-        /* لون زر فيسبوك */
-        .btn-facebook {
-            background: #1877F2;
-        }
-        .btn-facebook:hover {
-            background: #145dbf;
-        }
+        .btn-facebook { background: #1877F2; }
+        .btn-facebook:hover { background: #145dbf; }
 
-        /* تذييل الصفحة */
         footer {
             background-color: #333;
             color: #fff;
@@ -100,5 +108,43 @@
 
     <header>
         <h1>مجدي عيد (أبو سهام)</h1>
-        <p>موقع شخصي | تصميم صور بالذكاء الاصطنا
+        <p>موقع شخصي | تصميم صور بالذكاء الاصطناعي</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>أهلاً بكم في موقعي</h2>
+            <p>مرحباً، أنا مجدي. هذا هو موقعي الشخصي حيث أشارك اهتماماتي وتصميماتي الفنية باستخدام أدوات الذكاء الاصطناعي.</p>
+        </div>
+
+        <div class="section">
+            <h2>معرض أعمالي</h2>
+            <p>بعض الصور والتصميمات التي قمت باختيارها:</p>
+            <div class="gallery">
+                <img src="1763221734857.jpg" alt="تصميم 1">
+                
+                <img src="downloadfile.jpeg" alt="تصميم 2">
+
+                <img src="3.jpg" alt="تصميم 3" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>تواصل معي</h2>
+            <p>يمكنكم متابعتي عبر الروابط التالية:</p>
             
+            <a href="https://www.youtube.com/@Magdyeid682" target="_blank" class="btn btn-youtube">قناتي على يوتيوب</a>
+            <br>
+            <a href="https://www.facebook.com/Borawda/" target="_blank" class="btn btn-facebook">صفحة أبو روضة</a>
+            <a href="https://www.facebook.com/profile.php?id=61560261332106" target="_blank" class="btn btn-facebook">صفحة أبو سهام</a>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 - أبو سهام</p>
+    </footer>
+
+</body>
+</html>
